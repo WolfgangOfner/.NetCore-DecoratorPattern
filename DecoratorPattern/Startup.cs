@@ -23,8 +23,6 @@ namespace DecoratorPattern
         {
             services.AddControllersWithViews();
 
-            services.AddTransient<IDataService, DataService>();
-
             services.AddScoped(serviceProvider =>
             {
                 var logger = serviceProvider.GetService<ILogger<DataServiceLoggingDecorator>>();
